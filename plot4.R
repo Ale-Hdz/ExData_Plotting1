@@ -5,7 +5,7 @@ with(df, {
   # Plot 1
   plot(Time, Global_active_power, type = "n", xlab = "",
        ylab = "Global active power")
-  lines(Time, Global_active_power, type = "l", color = "black")
+  lines(Time, Global_active_power, type = "l", col = "black")
   # Plot 2
   plot(Time, Voltage, type = "n", xlab = "datetime",
        ylab = "Voltage")
@@ -21,7 +21,7 @@ with(df, {
          col = c("black", "red", "blue"),lwd = c(2,2,2))
   # Plot 4
   plot(Time, Global_reactive_power, type = "n", xlab = "datetime")
-  lines(Time, Global_reactive_power, type = "l", color = "black")
+  lines(Time, Global_reactive_power, type = "l", col = "black")
 })
 
 dev.off()

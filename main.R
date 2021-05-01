@@ -4,7 +4,7 @@ library(lubridate)
 wd <- "." # Your working directory
 setwd(wd)
 
-data_path <- file.path(wd, "data")
+data_path <- file.path(wd, "data") # Copy your dataset here (folder included)
 dataset_path <- file.path(data_path, "exdata_data_household_power_consumption",
                          "household_power_consumption.txt")
 
@@ -21,8 +21,8 @@ df <- df %>%
       mutate(Time = strptime(Time, format = "%T")) %>%
       mutate(Time = update(Time, year = year(Date), month = month(Date),
                            day = day(Date)))
-head(df)
-tail(df)
+print(head(df))
+print(tail(df))
 
 source("plot1.R")
 source("plot2.R")
